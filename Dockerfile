@@ -1,4 +1,4 @@
-FROM vimagick/scrapyd:latest
+FROM crown0726/orbit-python27node8:latest
 
 RUN	apt-get update && \
 	apt-get install -y --no-install-recommends unzip wget curl unzip fontconfig xvfb libgconf2-4 imagemagick && \
