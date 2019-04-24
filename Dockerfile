@@ -19,5 +19,5 @@ COPY	.scrapyd.conf /root/.scrapyd.conf
 COPY	IPAfont00303.zip /data/IPAfont00303.zip
 
 # ???
-RUN	unzip IPAfont00303.zip -d /usr/share/fonts/ && \
+RUN	unzip /data/IPAfont00303.zip -d /usr/share/fonts/ && \
 	fc-cache -fv
