@@ -9,3 +9,15 @@ RUN	apt-get update && \
 
 RUN	wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip && \
 	unzip chromedriver_linux64.zip -d /usr/bin/
+
+# Install pip pkgs
+RUN	pip install scrapy fake-useragent && \
+	pip install scrapyd
+
+# copy some files
+COPY	.scrapyd.conf /root/.scrapyd.conf
+COPY	IPAfont00303.zip /data/IPAfont00303.zip
+
+# ???
+RUN	unzip IPAfont00303.zip -d /usr/share/fonts/ && \
+	fc-cache -fv
