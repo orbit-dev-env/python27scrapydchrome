@@ -14,6 +14,10 @@ RUN	wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.z
 RUN	pip install scrapy fake-useragent && \
 	pip install scrapyd
 
+# Install scrapydweb
+RUN	pip install -U pip && \
+	pip install scrapydweb
+
 # copy some files
 COPY	.scrapyd.conf /root/.scrapyd.conf
 COPY	IPAfont00303.zip /data/IPAfont00303.zip
